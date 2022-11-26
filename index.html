@@ -1,12 +1,13 @@
 <html>
     <body>
+        <title id="title"></title>
         <script>
             function retrieveData() {
                 const queryString = document.location.search.substring(1);
                 const data = queryString.find(x => x.startsWith("data=")).substring(5);
                 const decoded = atob(data);
                 // .split("\n")[2]
-                alert(decoded);
+                document.getElementById("title").textContent = decoded;
             }
 
         </script>
